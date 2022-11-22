@@ -1,2 +1,2 @@
-# stringcalculator
-Skeleton code for string calculator workshop
+# String Calculator Kata
+Skeleton code for String Calculator Kata for TDD Fundamentals Workshop
