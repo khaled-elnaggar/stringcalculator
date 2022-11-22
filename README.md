@@ -1,2 +1,2 @@
 # String Calculator Kata
-Skeleton code for String Calculator Kata for TDD Fundamentals Workshop
+Skeleton project of String Calculator Kata for the TDD Fundamentals Workshop
