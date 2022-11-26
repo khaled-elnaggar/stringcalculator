@@ -9,7 +9,12 @@ export class StringCalculator {
     const numbers: number[] = stringNumbers.map(n => Number(n));
     
     let sum = numbers.reduce((a, b) => a + b, 0);
+    sum = StringCalculator.roundToOneDecimalPlace(sum);
     return sum;
   }
 
+  private static roundToOneDecimalPlace(sum: number) {
+    sum = Math.round(sum * 10) / 10;
+    return sum;
+  }
 }

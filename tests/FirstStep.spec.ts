@@ -43,4 +43,14 @@ describe("String Calculator - First Step", () => {
     }).toThrow(new InvalidInputError("Invalid input, can not add more than 2 numbers"))
   })
 
+  test("string with 2 numbers, returns their sum", () => {
+    //Arrange
+    const numbersString: string = "1.1,2.2";
+    //Act
+    const actualSum: number = StringCalculator.add(numbersString);
+    //Assert
+    const expectedSum = 3.3;
+    expect(actualSum).toEqual(expectedSum);
+  })
+
 })
