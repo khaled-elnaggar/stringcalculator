@@ -1,3 +1,4 @@
+import { ErrorMessages } from "../src/ErrorMessages";
 import { InvalidInputError } from "../src/InvalidInputError";
 import { StringCalculator } from "../src/StringCalcualtor";
 
@@ -40,10 +41,10 @@ describe("String Calculator - First Step", () => {
     //Assert
     expect(() => {
       StringCalculator.add(numbersString)
-    }).toThrow(new InvalidInputError("Invalid input, can not add more than 2 numbers"))
+    }).toThrow(new InvalidInputError(ErrorMessages.moreThan2NumbersErrorMessage))
   })
 
-  test("string with 2 numbers, returns their sum", () => {
+  test("returned sum rounded to 1 decimal place", () => {
     //Arrange
     const numbersString: string = "1.1,2.2";
     //Act
@@ -53,4 +54,13 @@ describe("String Calculator - First Step", () => {
     expect(actualSum).toEqual(expectedSum);
   })
 
+  test("string with non-number character, returns error", () => {
+    //Arrange
+    const numbersString: string = "1,x";
+    //Act
+    //Assert
+    expect(() => {
+      StringCalculator.add(numbersString)
+    }).toThrow(new InvalidInputError(ErrorMessages.nonNumberErrorMessage))
+  })
 })

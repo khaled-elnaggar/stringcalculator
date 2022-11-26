@@ -6,7 +6,12 @@ export class StringCalculator {
   public static add(numbersString: string) {
     const stringNumbers: string[] = numbersString.split(",");
     StringCalculatorGuard.checkForMoreThan2Numbers(stringNumbers);
-    const numbers: number[] = stringNumbers.map(n => Number(n));
+    
+    const numbers: number[] = stringNumbers.map(n => {
+      const num: number = Number(n);
+      StringCalculatorGuard.checkForNonNumberCharacter(num);
+      return num;
+    });
     
     let sum = numbers.reduce((a, b) => a + b, 0);
     sum = StringCalculator.roundToOneDecimalPlace(sum);
