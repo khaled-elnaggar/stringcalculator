@@ -21,5 +21,16 @@ describe("String Calculator - First Step", () => {
     const expectedSum = 1;
     expect(actualSum).toEqual(expectedSum);
   })
-  
+
+  test("string with 2 numbers, returns their sum", () => {
+    //Arrange
+    const numbersString: string = "1,2";
+    //Act
+    const actualSum: number = StringCalculator.add(numbersString);
+    //Assert
+    const expectedSum = 3;
+    expect(actualSum).toEqual(expectedSum);
+  })
+
+
 })
