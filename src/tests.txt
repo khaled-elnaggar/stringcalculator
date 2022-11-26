@@ -1,0 +1,7 @@
+First step:
+- empty string returns 0
+- string with 1 number, returns itself
+- string with 2 numbers, returns their sum
+- string with more than 2 numbers, returns InvalidInputError “Invalid input, can not add more than 2 numbers”
+- return value with 1 decimal place
+- string with non-number number returns InvalidInputError "number expected but found non-number”
