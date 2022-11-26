@@ -1,7 +1,7 @@
 export class StringCalculator{
 
   public static add(numbersString:string){
-    return 0;
+    return Number(numbersString);
   }
 
 }
